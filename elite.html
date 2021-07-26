@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="zh-hk" data-theme="cupcake">
+
+<head>
+  <title>資優教育</title>
+  <meta charset="UTF-8" />
+  <!--responsive-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+  <link rel="icon" href="/assets/images/favicon.png">
+
+  <!--icons-->
+  <script src="https://kit.fontawesome.com/74a0f8938f.js" crossorigin="anonymous"></script>
+
+  <!--tailwind css components-->
+  <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+  <!--carousel-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+  <!--search bar-->
+  <script async src="https://cse.google.com/cse.js?cx=6cb5e92d3942c01c1"></script>
+</head>
+
+<body class="bg-indigo-200">
+  <header class="sticky top-0 text-lg z-30 w-full lg:bg-cyan-500 lg:mb-6">
+    <div class="flex justify-start items-center text-gray-100">
+      <div class="relative bg-orange-600 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <!--hidden on small and medium screen, appears on large and extralarge (lg = large, md = medium, etc) screens-->
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            <a href="index.html">主頁</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="relative bg-blue-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <!--hidden on small and medium screen, appears on large and extralarge (lg = large, md = medium, etc) screens-->
+        <div class="relative ">
+          <button class="flex items-center font-bold">
+            關於我們
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/3"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="about.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">辦學團體 + 學校使命 + 願景信念</p>
+              </a>
+              <a href="organisation.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">行政架構 + 認識老師</p>
+              </a>
+              <a href="motto_song.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校訓、校徽 + 校歌</p>
+              </a>
+              <a href="supervisor202009.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校監的話</p>
+              </a>
+              <a href="minister202009.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校牧的話</p>
+              </a>
+              <a href="principal.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校長的話</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-lime-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            學生生活
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="schoolbus.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校車</p>
+              </a>
+              <a href="lunch.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">午膳</p>
+              </a>
+              <a href="uniform.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校服</p>
+              </a>
+              <a href="facilities.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">設施</p>
+              </a>
+              <a href="Counseling.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">社工及課後支援</p>
+              </a>
+              <a href="activity.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">學生活動</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-purple-400 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            教學資訊
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="subject.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">課程特色</p>
+              </a>
+              <a href="SchoolAwardScheme.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校本獎勵計劃</p>
+              </a>
+              <a href="ProfessionalDevelopment.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">教師專業發展</p>
+              </a>
+              <a href="subject.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">各科特色</p>
+              </a>
+              <a href="" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">學生支援</p>
+              </a>
+              <a href="GiftedEducation2.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">資優教育</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-teal-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            學生專區
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="calendar.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校曆</p>
+              </a>
+              <a href="evaluate.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">考試及評估</p>
+              </a>
+              <a href="timetable.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">上課時間表</p>
+              </a>
+              <a href="schoolwork2.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">學生作品</p>
+              </a>
+              <a href="alumni.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校友會</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-yellow-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            我們的成就
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="performance.html">校內成績</p>
+              </a>
+              <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="achievement.html">校外成績</p>
+              </a>
+              <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="alumniachievement.html">畢業生成就</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-red-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            家長專區
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="tkppta.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">家教會</p>
+              </a>
+              <a href="notice.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">通告</p>
+              </a>
+              <a href="homework.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">家課</p>
+              </a>
+              <a href="secondary.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">升中資訊</p>
+              </a>
+              <a href="news/index.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">媒體報導</p>
+              </a>
+              <a href="home_school/public/index.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">家校齊家教</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-lime-600 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            入學資訊
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="kindergarten/index.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">幼稚園專區</p>
+              </a>
+              <a href="entry.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">插班生</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-gray-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            活動後記
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="photos/photos2021.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2020-2021 年度</p>
+              </a>
+              <a href="photos/photos1920.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2019-2020 年度</p>
+              </a>
+              <a href="photos/photos1819.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2018-2019 年度</p>
+              </a>
+              <a href="photos/photos1718.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2017-2018 年度</p>
+              </a>
+              <a href="photos/photos1617.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2016-2017 年度</p>
+              </a>
+              <a href="photos/photos1516.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2015-2016 年度</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-orange-700 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            出版及刊物
+          </button>
+          <div
+            class="absolute top-2 lg:top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="plans_and_reports.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">週年計劃及報告</p>
+              </a>
+              <a href="catalog/1920/tkp.pdf" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">學校簡介</p>
+              </a>
+              <a href="curriculum/1920/tkp.pdf" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">特色課程</p>
+              </a>
+              <a href="magazine/index.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">彩訊</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-yellow-500 px-4 py-2 hidden space-x-1 lg:inline-flex" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <button class="flex items-center font-bold">
+            常用連結
+          </button>
+          <div
+            class="absolute top-0 z-50 w-screen max-w-xs p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:left-1/2 lg:-translate-x-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="grid grid-cols-1 gap-2 mb-2">
+              <a href="eClassApp.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">E-Class 安裝教學</p>
+              </a>
+              <a href="https://www.youtube.com.watch?v=rTOXsKO2JJM" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">E-Class 教學短片</p>
+              </a>
+              <a href="downloads/20200629.pdf" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">學校籌款活動</p>
+              </a>
+              <a href="p1english.htm" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">英文小圖書（聆聽內容）</p>
+              </a>
+              <a href="https://www.jcschoolmindfulness.org/" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">校園靜觀計劃</p>
+              </a>
+              <a href="https://www.hkedcity.net/ereadscheme/zh-hant/" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">E悅讀學校計劃</p>
+              </a>
+              <a href="video.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">音樂頻道 Channel M</p>
+              </a>
+              <a href="https://aa.mysmartedu.com.cn/index.php/user/login/index" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">AA Power 學習平台</p>
+              </a>
+              <a href="https://satkp.sams.edu.hk/" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">Web SAMS 網上校管系統</p>
+              </a>
+              <a href="alumni.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">TKP 校友會</p>
+              </a>
+              <a href="star2020.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">每月之星</p>
+              </a>
+              <a href="seondary.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">升中資訊</p>
+              </a>
+              <a href="home_school/public/index.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">家校齊家教</p>
+              </a>
+              <a href="vote.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">家長校董選舉（2018-19年度）</p>
+              </a>
+              <a href="kindergarten/index.html" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">幼稚園專區（小一入學）</p>
+              </a>
+              <a href="kindergarten/pdf/New_8_notes_entry.pdf" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">2021年度小一候補生申請</p>
+              </a>
+              <a href="pdf/tender.pdf" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">招標廣告</p>
+              </a>
+              <a href="https://www.gapsk.org" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                <p class="">GAPSK 普通話水平測試</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--search bar-->
+      <div class="relative bg-cyan-500 px-4 py-2 hidden lg:block xl:hidden space-x-1" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="relative">
+          <i class="fas fa-search"></i>
+          <div class="absolute top-2 lg:top-0 z-50 w-screen max-w-xl p-2 mx-0 my-12 text-md text-gray-800 transform bg-gray-50 rounded shadow lg:right-1/2"
+            x-show.transition.in.opacity.out.opacity="one" @click.away="one = false" style="display: none;">
+            <div class="gcse-search"></div>
+          </div>
+        </div>
+      </div>
+      <div class="relative bg-cyan-500 text-gray-800 px-4 hidden xl:block space-x-1" @click="one = true"
+        x-data="{ one: false, two: false }">
+        <div class="gcse-searchbox-only"></div>
+      </div>
+
+      <!--floating mobile menu-->
+      <div class="flex items-center space-x-1 text-gray-800 rounded-full shadow-md bg-sky-700">
+        <div class="inline-flex lg:hidden" x-data="{ open: false }">
+
+          <!--three horizontal lines-->
+          <button class="flex-none px-2 btn-white btn-md text-gray-100" @click="open = true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="w-5 h-5">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <span class="sr-only">Open Menu</span>
+          </button>
+
+          <!--top right x in pop-up window-->
+          <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 m-2 space-y-1 bg-gray-50 rounded-box shadow"
+            x-show.transition="open" @click.away="open = false" style="display: none;">
+            <button class="self-end flex-none px-2 btn-link btn-icon" @click="open = false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span class="sr-only">Close Menu</span>
+            </button>
+            
+            <div tabindex="0" class="collapse w-full rounded-box border border-base-300 collapse-close">
+              <div class="gcse-search"></div>
+            </div>
+            <div tabindex="0" class="collapse w-full rounded-box border border-base-300 collapse-close">
+              <div class="collapse-title text-xl font-medium">
+                <a href="index.html"><i class="fas fa-home text-orange-500"></i>&nbsp;主頁</a>
+              </div>
+            </div>
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-info-circle text-blue-500"></i>&nbsp;關於我們
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">辦學團體 + 學校使命 + 願景信念</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">行政架構 + 認識老師</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校訓、校徽 + 校歌</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校監的話</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校牧的話</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校長的話</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-futbol text-lime-500"></i>&nbsp;學生生活
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校車</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">午膳</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校服</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">設施</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">社工及課後支援</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">學生活動</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-chalkboard-teacher text-cyan-700"></i>&nbsp;教學資訊
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">課程特色</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校本獎勵計劃</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">教師專業發展</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">各科特色</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">學生支援</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">資優教育</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-graduation-cap text-teal-500"></i>&nbsp;學生專區
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">網上資源</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校曆</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">考試及評估</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">上課時間表</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">學生作品</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校友會</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-medal text-yellow-400"></i>&nbsp;我們的成就
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校內成績</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">校外成績</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">畢業生成就</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-user-friends text-red-500"></i>&nbsp;家長專區
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">家教會</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">通告</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">家課</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">升中資訊</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">媒體報導</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">家校齊家教</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-binoculars text-gray-800"></i>&nbsp;入學資訊
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">幼稚園專區</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">插班生</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-photo-video text-gray-500"></i>&nbsp;活動後記
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">2020-2021 年度</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">2019-2020 年度</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">2018-2019 年度</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">2017-2018 年度</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">2016-2017 年度</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">2015-2016 年度</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-book-open text-orange-700"></i>&nbsp;出版及刊物
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">週年計劃及報告</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">學校簡介</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">特色課程</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class="">彩訊</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse w-full rounded-box border border-base-300 collapse-arrow">
+              <input type="checkbox">
+              <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-star text-yellow-500"></i>&nbsp;常用連結
+              </div>
+              <div class="collapse-content">
+                <div class="grid grid-cols-1 gap-2 mb-2">
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p><i class="fas fa-tools"></i>&nbsp;E-Class 安裝教學</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p><i class="fas fa-laptop"></i>&nbsp;E-Class 教學短片</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p><i class="fas fa-hand-holding-usd"></i>&nbsp;學校籌款活動</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-headphones"></i>&nbsp;英文小圖書（聆聽內容）</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fab fa-envira"></i>&nbsp;校園靜觀計劃</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-book-open"></i>&nbsp;E悅讀學校計劃</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-play-circle"></i>&nbsp;音樂頻道 Channel M</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-brain"></i>&nbsp;AA Power 學習平台</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-users-cog"></i>&nbsp;Web SAMS 網上校管系統</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-coffee"></i>&nbsp;TKP 校友會</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-star"></i>&nbsp;每月之星</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-binoculars"></i>&nbsp;升中資訊</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-users"></i>&nbsp;家校齊家教</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-vote-yea"></i>&nbsp;家長校董選舉（2018-19年度）</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-child"></i>&nbsp;幼稚園專區（小一入學）</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-door-open"></i>&nbsp;2021年度小一候補生申請</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-ad"></i>&nbsp;招標廣告</p>
+                  </a>
+                  <a href="#" class="px-3 py-2 transition rounded hover:bg-gray-200 hover:text-primary">
+                    <p class=""><i class="fas fa-comments"></i>&nbsp;GAPSK 普通話水平測試</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <section class="py-20 px-10 flex-wrap">
+    <h1 class="mb-10 px-6 mx-auto lg:max-w-screen-xl text-6xl font-bold font-heading">資優教育</h1>
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="mb-6 text-3xl font-bold font-heading">理念</h2>
+        <p class="mb-6 text-lg text-gray-800 leading-loose">本校非常着重照顧學生的不同學習需要，照顧高能力學生更是本校的其中一個目標。
+          我們相信每位學生都有不同的天賦潛能，只要發掘及加以栽培，便能得到充分的發揮。
+          因此，本校透過不同層面的校本資優課程，為高能力學生提供多元化及適切的學習機會，
+          培養學生不同能力的發展，啟發學生潛能，幫助他們追求卓越，使他們成為樂於學習，
+          喜歡探索，具獨立思考的學生。</p>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="mb-6 text-3xl font-bold font-heading">校本資優學生培育</h2>
+        <div class="grid grid-cols-3 overflow-x-auto rounded-box">
+          <div class="text-xl p-4">第三層<br>校外支援</div>
+          <div class="text-xl p-4 bg-yellow-200">3<br>特別資優學生</div>
+          <div class="text-xl bg-yellow-200"></div>
+          <div class="text-xl p-4">第二層<br>校本抽離式計劃</div>
+          <div class="text-xl p-4 bg-sky-200">2C<br>擁有特別才能或<br>於學科表現出色的學生</div>
+          <div class="text-xl p-4 bg-cyan-200">2D<br>於某特定範疇表現出色的學生</div>
+          <div class="text-xl p-4">第一層<br>校本全班式教學</div>
+          <div class="text-xl p-4 bg-emerald-100">1A<br>所有學生</div>
+          <div class="text-xl p-4 bg-emerald-200">1B<br>於個別學科表現出色的學生</div>
+          <div class="text-xl p-4"></div>
+          <div class="text-xl py-4 pl-4 col-span-2 grid grid-cols-3 items-center text-center">
+            <div class="text-xl p-4">一般性<br>（一般性增潤）</div>
+            <div class="text-xl"><i class="fas fa-arrow-left"></i> 課程內容 <i class="fas fa-arrow-right"></i></div>
+            <div class="text-xl p-4">專門性<br>（特定範疇）</div>
+          </div>
+        </div>
+        <div class="text-lg p-4 bg-gray-200 rounded-b-box">
+          <ul class="list-disc list-inside gap-4 inline-grid">
+            <li>第一層：全班式(校本)</li>
+            <ul class="list-disc list-inside gap-2 inline-grid pl-10">
+              <li>在教學過程中滲入資優教育的三大元素，包括高層次思維技巧、創造力和個人及社交能力</li>
+              <li>增潤學科課程內容</li>
+            </ul>
+            <li>第二層：抽離式(校本)</li>
+            <ul class="list-disc list-inside inline-grid pl-10">
+              <li>設立課後資優學習班</li>
+              <li>建立指導員(mentor)制度</li>
+            </ul>
+            <li>第三層：校外支援</li>
+            <ul class="list-disc list-inside inline-grid pl-10">
+              <li>推薦學生參加校外資優課程及比賽</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 text-lg">
+        <div>
+          <h2 class="mb-4 text-3xl font-bold font-heading">資優家長培訓</h2>
+          <ul class="list-disc list-inside inline-grid pl-10">
+            <li>安排家長參加校本或校外的資優兒童家長講座及分享會</li>
+            <li>個別約見家長商討教育資優兒童的策略與方法</li>
+          </ul>
+        </div>
+          <div id="slider1" class="splide"
+          data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":"20rem"}'>
+          <div class="splide__track rounded-box">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="assets/images/elite/資優家長培訓/DSC04884.JPG">
+              </li>
+              <li class="splide__slide">
+                <img src="assets/images/elite/資優家長培訓/DSC04887.JPG">
+              </li>
+              <li class="splide__slide">
+                <img src="assets/images/elite/資優家長培訓/DSC04893.JPG">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <div class="max-w-6xl mx-auto text-lg">
+        <div>
+          <h2 class="mb-4 text-3xl font-bold font-heading">田小人才庫</h2>
+          <ul class="list-disc list-inside inline-grid pl-10">
+            <p>把優異學科成績及具其他突出表現的學生加入人才庫</p>
+            <br>
+            <p>學生加入人才庫後，學校會為他們組織校本資優兒童小組，
+              學校透過Edmodo向他們推介值得參觀的地方、各項比賽、課程及挑戰題等，
+              讓他們互相學習，提升他們的高層次思考。</p>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <h2 class="max-w-6xl mx-auto mb-4 text-3xl font-bold font-heading">課後資優班</h2>
+      <div class="max-w-6xl mx-auto flex flex-col lg:flex-row text-lg gap-6">
+        <div class="card bordered lg:w-1/2">
+          <figure>
+            <div id="slider1" class="splide"
+              data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":"20rem"}'>
+              <div class="splide__track rounded-t-box">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/寫作小先鋒(到第6堂)/20210417_113141.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/寫作小先鋒(到第6堂)/20210417_120658.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/寫作小先鋒(到第6堂)/20210424_120615.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/寫作小先鋒(到第6堂)/20210619_115851.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/寫作小先鋒(到第6堂)/20210619_115905.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/寫作小先鋒(到第6堂)/20210619_120106.jpg">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body bg-pink-200">
+            <h2 class="card-title"> 寫作小先鋒(小五中文科)</h2>
+            <p>成立一隊訓練有素的「寫作小先鋒」，透過訓練，提升同學的寫作及表達技巧，從而掌握應用，
+              加強學生的觀察、自信、想像力、創造力、表達技巧和應變能力；並參加校外寫作比賽，廣增識見。</p>
+          </div>
+        </div>
+        <div class="card bordered lg:w-1/2">
+          <figure>
+            <div id="slider1" class="splide"
+              data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":"20rem"}'>
+              <div class="splide__track rounded-t-box">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210424_112311.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210424_112835.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210424_114958.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210522_113649.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210522_114356.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210522_114446.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210619_114726.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210619_114802.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210619_114858.jpg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/校園小記者(到第6堂)/20210619_115422.jpg">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body bg-sky-200">
+            <h2 class="card-title">校園小記者(小四)</h2>
+            <p>
+              成立一隊訓練有素的「校園小記者」，透過訓練，提升同學的寫作、探訪及運用資訊科技的技巧，
+              安排小記者於校訊撰寫專欄，及在早會報導新聞時事，於「運動會」、
+              「開放日」等學校的特別活動進行採訪拍攝，製作成短片，並在學校的網上平台分享。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <h2 class="max-w-6xl mx-auto mb-4 text-3xl font-bold font-heading">英普資優培訓</h2>
+      <div class="max-w-6xl mx-auto flex flex-col lg:flex-row text-lg gap-6">
+        <div class="card bordered lg:w-1/2">
+          <figure>
+            <div id="slider1" class="splide"
+              data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":"20rem"}'>
+              <div class="splide__track rounded-t-box">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/英文資優培訓/IMG_0614.JPG">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/英文資優培訓/IMG_7525.JPG">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body bg-pink-200">
+            <h2 class="card-title">英文資優培訓</h2>
+            <p>本校在高小校本英文課程中涵蓋部分初中內容，
+              培養學生參與各項國際英語水平認證測試，
+              如培生兒童國際英語證書（PTE）和初中托福考試（TOFEL Junior）等，
+              讓學生能夠累積經驗，發揮所長。</p>
+          </div>
+        </div>
+        <div class="card bordered lg:w-1/2">
+          <figure>
+            <div id="slider1" class="splide"
+              data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":"20rem"}'>
+              <div class="splide__track rounded-t-box">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/普通話資優培訓/1.jpeg">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="assets/images/elite/普通話資優培訓/2.jpg">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body bg-sky-200">
+            <h2 class="card-title">普通話資優培訓</h2>
+            <p>GAPSK是香港獲得中國教育部認證批辦的中文普通話水平考試項目，
+              同時得到北京大學認證，因此本校為有志提升普通話水平的高小學生，
+              制定校本自學進程，輔以個別專科訓練，讓學生參與GAPSK普通話水平考試。
+              在備試及應試過程中，讓學生普通話的聽、說、讀、寫綜合能力獲得提昇。</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <h2 class="max-w-6xl mx-auto mb-6 text-3xl font-bold font-heading">校外資優培訓</h2>
+      <div class="max-w-6xl mx-auto mb-16 grid grid-cols-1 lg:grid-cols-2 text-lg gap-6">
+        <div class="card bordered bg-sky-200">
+          <div class="card-body">
+            <h2 class="card-title">Micro:bit親子編程課程</h2> 
+            <p>日期：26/3/2021, 9/4/2021, 16/4/2021（星期五）<br>
+              時間：晚上7:00-9:00<br>
+              對象：小四至小五學生及其家長（10對親子）<br>
+              授課形式：Zoom<br>
+              舉辦機構：香港小童群益會社區創意學習中心與「賽馬會童編新里程」計劃合辦
+            </p> 
+          </div> 
+          <figure>
+            <div id="slider1" class="splide"
+          data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":' 20rem'}'>
+          <div class="splide__track rounded-b-box">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/親子microbit相片/20210322_113404.jpg">
+                </div>
+                4H 陳奕陽
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/親子microbit相片/20210322_113408.jpg">
+                </div>
+                4H 劉皓旻
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/親子microbit相片/20210322_113415.jpg">
+                </div>
+                4H 李羨陽
+              </li>
+            </ul>
+          </div>
+        </div>
+          </figure>
+        </div>
+        <div>
+          <div class="card bordered bg-pink-200 mb-6">
+            <figure>
+              <div id="slider1" class="splide"
+          data-splide='{"type":"loop","autoplay":true,"interval":5000,"cover":true,"height":"20rem","pagination":false}'>
+          <div class="splide__track rounded-box">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/新地生活工程師計劃/開展禮/_DSC7027.JPG">
+                </div>
+                新地生活工程師計劃開展禮(2021年5月8日)
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/新地生活工程師計劃/開展禮/_DSC7029.JPG">
+                </div>
+                新地生活工程師計劃開展禮(2021年5月8日)
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/新地生活工程師計劃/開展禮/IMG_5365.JPG">
+                </div>
+                新地生活工程師計劃開展禮(2021年5月8日)
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/新地生活工程師計劃/製作扭蛋機相片(2021年6月19日)/製作扭蛋機1.jpeg">
+                </div>
+                學生在製作扭蛋機 (2021年6月19日)
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/新地生活工程師計劃/製作扭蛋機相片(2021年6月19日)/製作扭蛋機2.jpeg">
+                </div>
+                學生在製作扭蛋機 (2021年6月19日)
+              </li>
+              <li class="splide__slide">
+                <div class="splide__slide__container">
+                  <img src="assets/images/elite/新地生活工程師計劃/製作扭蛋機相片(2021年6月19日)/製作扭蛋機3.jpeg">
+                </div>
+                學生在製作扭蛋機 (2021年6月19日)
+              </li>
+            </ul>
+          </div>
+        </div>
+            </figure> 
+            <div class="card-body">
+              <h2 class="card-title">新地生活工程師計劃</h2> 
+              <p>上課時間為期約半年，可增加學生的科學知識；發掘學生在 STEM 的潛能，
+                並運用其專長服務社會，回應社區上的需要；並提升學生的抗逆力及解難能力。</p> 
+            </div>
+          </div>
+          <div class="card bordered bg-sky-200">
+            <div class="card-body">
+              <h2 class="card-title">資優教育學苑及中文大學資優課程</h2> 
+              <p>學校會因應學生的能力推薦他們參加資優教育學苑及中文大學資優課程</p> 
+            </div> 
+          </div> 
+        </div> 
+      </div>
+      <div class="max-w-6xl mx-auto mb-16 flex flex-col lg:flex-row text-lg gap-6">
+        <div class="overflow-y-auto w-full lg:w-60">
+          <table class="table w-full lg:w-60">
+            <thead>
+              <tr>
+                <th colspan="3">新地生活工程師計劃參與學生</th>
+              </tr>
+              <tr>
+                <th>編號</th>
+                <th>班別</th>
+                <th>學生姓名</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>4H</td>
+                <td>顧景天</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>4H</td>
+                <td>勞靖茵</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>4H</td>
+                <td>吳俊穎</td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>4F</td>
+                <td>陳寶頤</td>
+              </tr>
+              <tr>
+                <th>5</th>
+                <td>4F</td>
+                <td>盧兆杰</td>
+              </tr>
+              <tr>
+                <th>6</th>
+                <td>4L</td>
+                <td>黃錦騫</td>
+              </tr>
+              <tr>
+                <th>7</th>
+                <td>4L</td>
+                <td>梁達言</td>
+              </tr>
+              <tr>
+                <th>8</th>
+                <td>5H</td>
+                <td>鍾雅琳</td>
+              </tr>
+              <tr>
+                <th>9</th>
+                <td>5H</td>
+                <td>何正宗</td>
+              </tr>
+              <tr>
+                <th>10</th>
+                <td>5H</td>
+                <td>邱凝兒</td>
+              </tr>
+              <tr>
+                <th>11</th>
+                <td>5H</td>
+                <td>黃愷怡</td>
+              </tr>
+              <tr>
+                <th>12</th>
+                <td>5F</td>
+                <td>何鈞堯</td>
+              </tr>
+              <tr>
+                <th>13</th>
+                <td>5F</td>
+                <td>林梓朗</td>
+              </tr>
+              <tr>
+                <th>14</th>
+                <td>5L</td>
+                <td>陳智豪</td>
+              </tr>
+              <tr>
+                <th>15</th>
+                <td>5L</td>
+                <td>葉子樂</td>
+              </tr>
+              <tr>
+                <th>16</th>
+                <td>5D</td>
+                <td>陳慰渝</td>
+              </tr>
+              <tr>
+                <th>17</th>
+                <td>5D</td>
+                <td>王子鵬</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="overflow-y-auto w-auto break-words">
+          <table class="table w-auto lg:w-40 break-words">
+            <thead>
+              <tr>
+                <th class="w-1/6">日期</th>
+                <th class="w-1/6">借用時間</th>
+                <th>活動</th>
+                <th class="w-1/6">活動時間</th>
+                <th class="w-1/6">人數</th>
+                <th class="w-1/6">地點</th>
+                <th>備註</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-indigo-200">
+                <td>22/5（六）</td>
+                <td rowspan="6">9:30-12:30</td>
+                <td rowspan="6">基礎科學 101</td>
+                <td rowspan="6">10:00-12:15</td>
+                <td rowspan="6">20-25人</td>
+                <td rowspan="6">課室</td>
+                <td></td>
+              </tr>
+              <tr class="bg-indigo-200">
+                <td>29/5（六）</td>
+              </tr>
+              <tr class="bg-indigo-200">
+                <td>5/6（六）</td>
+              </tr>
+              <tr class="bg-indigo-200">
+                <td>19/6（六）</td>
+              </tr>
+              <tr class="bg-indigo-200">
+                <td>26/6（六）</td>
+              </tr>
+              <tr class="bg-indigo-200">
+                <td>3/7（六）</td>
+              </tr>
+              <tr>
+                <td>13/7（二）</td>
+                <td rowspan="3">9:30-13:30</td>
+                <td rowspan="3">戲劇傳意</td>
+                <td rowspan="3">10:00-13:00</td>
+                <td rowspan="3">20-25人</td>
+                <td rowspan="3">活動室</td>
+                <td rowspan="3">無枱椅較理想</td>
+              </tr>
+              <tr>
+                <td>20/7（二）</td>
+              </tr>
+              <tr>
+                <td>27/7（二）</td>
+              </tr>
+              <tr>
+                <td>16/7（五）</td>
+                <td rowspan="5">9:30-13:00</td>
+                <td rowspan="5">設計思維技巧<br>訓練小組</td>
+                <td rowspan="5">10:00-12:30</td>
+                <td rowspan="5">20-25人</td>
+                <td rowspan="5">課室</td>
+                <td rowspan="5">其中一天會有<br>模擬高齡體驗衣活動，<br>
+                  有機會用到更多場地，<br>日子待覆</td>
+              </tr>
+              <tr>
+                <td>23/7（五）</td>
+              </tr>
+              <tr>
+                <td>6/8（五）</td>
+              </tr>
+              <tr>
+                <td>13/8（五）</td>
+              </tr>
+              <tr>
+                <td>20/8（五）</td>
+              </tr>
+              <tr>
+                <td>11/9（六）</td>
+                <td rowspan="7">9:30-12:00</td>
+                <td rowspan="7">項目研發 - <br>電腦編程</td>
+                <td rowspan="7">10:00-12:00</td>
+                <td rowspan="7">20人</td>
+                <td rowspan="7">電腦室</td>
+                <td rowspan="7"></td>
+              </tr>
+              <tr>
+                <td>18/9（六）</td>
+              </tr>
+              <tr>
+                <td>25/9（六）</td>
+              </tr>
+              <tr>
+                <td>2/10（六）</td>
+              </tr>
+              <tr>
+                <td>9/10（六）</td>
+              </tr>
+              <tr>
+                <td>23/10（六）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <h2 class="max-w-6xl mx-auto mb-6 text-3xl font-bold font-heading">校外資優培訓</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 text-lg gap-6">
+        <div class="card bordered rounded-box bg-pink-200">
+          <div class="card-body">
+            <h2 class="card-title">「STEAM蒸蒸日上：生活中的數理人文」計劃──數理人文閱讀報告比賽(公開組)</h2> 
+            <p>陳卓圻同學取得了冠軍。</p> 
+          </div> 
+          <figure>
+            <img src="assets/images/elite/校外比賽/陳卓圻.jpg">
+          </figure>
+        </div> 
+        <div class="rounded-box"><img src="assets/images/elite/校外比賽/cert.jpg"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-10 py-12 px-12 mx-auto lg:max-w-screen-xl rounded-box bg-gray-100">
+      <h2 class="max-w-6xl mx-auto mb-6 text-3xl font-bold font-heading">學生作品</h2>
+      <div id="slider1" class="splide p-6 max-w-6xl mx-auto rounded-box bg-amber-100" data-splide='{"type":"loop","autoplay":false,"height":"50rem"}'>
+        <div class="splide__track rounded-box">
+          <ul class="splide__list">
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《彩色夜鶯》 5H 何樂兒</h2>
+                <p>我是一隻鳥，是一隻居住在森林裏的野鳥。某天，森林裏原本安寧的生活卻被殘忍無情的人類破壞了。</p>
+                <br>
+                <p>那天，我正和朋友聊天，小麻雀指著前方一件奇怪的東西，問：「那是什麼？」「我們住在這裏這麼久，
+                  從來都沒有看過這種東西呢！」金絲雀說。他一邊飛向前，一邊向我說：「我想看清楚這東西是甚……」話還沒完，
+                  他已經被纏住了。一眾鳥兒受到驚嚇，紛紛起飛，有許多就跟金絲雀一樣被纏住了。貓頭鷹見狀，馬上飛去眾鳥兒面前，
+                  說：「這是人類的陷阱！大家快點離開！」我正要飛走，那陷阱卻向著我的頭頂落下，把我困住了。 </p>
+                <br>
+                <p>「救命呀！」我用盡力氣地叫喊着，其他鳥兒也掙扎著。一個人類出現了，其中一個一手把我抓住，放進一個小籠子，
+                  然後把我放進車廂裏，用一塊布蓋著。黑暗中，不知過了多久，我又餓又渴，終於布被揭開了，我也得到了食物和水。
+                  放眼一望，我在哪？</p>
+                <br>
+                <p>房間中有一隻鸚鵡，牠跟我說：「你是從森林來的嗎？不要怕，先喝點水，吃點糧。」「我的確是從森林來的，
+                  這裏是甚麼地方？」我疑惑地問。「這兒是城市呀！這裏有吃不完的食物，舒適的鳥籠，沒有老鷹！」牠說。
+                  「但這裏並不是我熟悉的地方，森林才是我的家啊！」我說。「你竟然是一隻還想住在森林的鳥？
+                  我真不想跟你這種沒有見識的鳥兒聊天。再見！」然後，他飛回自己的橫杆上。雖然他向我冷嘲熱諷，但我不會傷心、
+                  灰心，或是後悔，因為無論我在哪裏，森林是我家永遠是鐵一般的事實，永遠也不會改變。</p>
+                <br>
+                <p>另一個人類出現了，他把我在森林裏的鳥兒朋友，一隻一隻、一對一對趕進房間中更精緻的鳥籠中，然後拿到店面。</p>
+                <br>
+                <p>「老闆，這一隻金絲雀多少錢？」</p>
+                <br>
+                <p>「客人你真會選，這是剛送到的新貨呀！價是高了點，但毛色漂亮，歌又唱得好聽呀！」金絲雀被買走了，
+                  我不明白的是，牠看上去很愉快。</p>
+                <br>
+                <p>沒過多久，我就被抓進一個大籠子，那個人類給了我香噴噴的食物。「唏！美麗的小鳥，唱個歌吧！
+                  我可花了大價錢把你買回來的。」我不想唱歌，為甚麼我要在囚籠中唱歌？但是我開始發現，其他鳥兒都在唱歌。
+                  「這個鳥籠很舒服啊！」「我這兒有軟綿綿的底墊呢！」「大家都不及我，我的鳥籠上有彩色的蝴蝶結呢！」
+                  「有美味的糧食才是最重要啊！」「哇！住在這裏好舒服，我真希望永遠可以住在這裏啊！」……</p>
+                <br>
+                <p>「你們為甚麼會想住在這種連翅膀都不能展開的籠子呢？為了美食不惜把森林遺忘！」我想我是瘋了，我狂號，
+                  我嘶叫：「我想到能自由自在飛翔的地方！我想住在能自由歌唱的地方！我一定要逃出這個地獄！」鸚鵡忍不住又飛了過來，
+                  說：「你別吵！那有像你這樣的鳥？有吃有喝都不好，隨便亂吼，我們這兒是高尚地方，唱得好的鳥兒才有資格留下，
+                  你沒看見麻雀都被放走了嗎？牠們才沒有資格被人付錢買回家呢！」我拚命掙扎，拚命掙扎，我努力地叫喊着，我要自由！
+                  我要自由！我不要留在這地方！我不斷把身體撞到籠子上。</p>
+                <br>
+                <p>「這鳥兒真吵啊！」</p>
+                <br>
+                <p>「還在籠子撞來撞去，羽毛都快掉光了！」</p>
+                <br>
+                <p>「好鳥兒自然比較挑剔，我給牠換上更好的糧，你們明天再來，就會聽到牠唱出美妙的歌聲。」老闆一邊招呼客人，
+                  一邊把另一盤美味佳餚就放到我的面前。我嗅了一下，真的很香啊！但我不可>以屈服，我克制着自己：我不吃！絕對不吃！</p>
+                <br>
+                <p>最後，我到了天堂，天父賜了我一身有如彩虹般的美麗毛色，以獎勵我沒有因人間舒適生活引誘，而放棄自身應有的自由。
+                  天父實現我的願望，我負責在夜裏唱歌，我動聽的歌聲，可以使人安心入睡。我有了一個新名字──彩色夜鶯。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《成為籃球場上的明星》 5H 何正宗</h2>
+                <p> 新的學期開始了，田家炳小學籃球隊的指導老師感到十分焦慮，因為學界比賽快要舉行，而不幸地，抽簽的結果是：對戰去年冠軍。剛成為正選的向雲飛，在比賽前囂張地說：「以我的實力，一個人都能夠贏！」一位隊友說：「你是不是傻呀？對方是冠軍人馬！」但向雲飛沒有理會，他信心滿滿，覺得球隊有自己就能贏，而自己一定會成為籃球場上的明星。</p>
+                <br>
+                <p>比賽的日子來了，比賽前，向雲飛和隊友說：「今天看我表演！」對方雖說是冠軍隊，但可能教練想保留實力，一節下來，田家炳小學的分數居然沒落後多少。向雲飛愈打愈覺得有機會取勝。第二節的一次傳球，向雲飛的「火眼金睛」看到傅志明人在三分線，立即傳球給他，誰知志明沒有看到球，球就出界了。又一次，向雲飛一接到球，被人左右夾擊，但因為剛才的教訓，他看到志明有空位也堅決不傳球，最後投球不中，籃板又搶不到，被對方一輪快攻得分。向雲飛憤怒極了，決定在下一球找回顏面，趁對方打完快攻後，向雲飛投進了一球三分球。這令他拿到全場入球最高分的球員──球隊卻輸了。</p>
+                <br>
+                <p>回到學校，向雲飛捱了指導老師一頓臭罵，說他再不傳球就不讓他上場。向雲飛覺得自己得分最高，不會有錯，在更衣室發脾氣。這時，傅志明進了更衣室拿書包，說：「我知道我打得不夠好，但籃球不是一個人打的呀！」垂頭喪氣地背上書包走了。</p>
+                <br>
+                <p>「一言驚醒夢中人」，球賽的畫面一幕又一幕重現在向雲飛的眼前。隊友甲有用眼神表示他可以接球的呀！隊友乙的手都伸到可接應的位置呀！還有……還有……處處都有空位。好勝的向雲飛不斷分析自己的失誤，發現每球隊友都有空位，只是自己太自私才引致失誤。他不禁罵自己：「我怎麼那麼笨！真是傻到家了！」</p>
+                <br>
+                <p>接著的練習，向雲飛改變了很多，指導老師讓向雲飛出賽。隊友們對向雲飛的改變，一點信心都沒有。「到時他依然會把球當寶貝，總是自己霸著，我們碰不到球，贏輸都與我們無關。」向雲飛偷聽到隊友的批評，心中很不是味兒，但他要贏的心很堅決。</p>
+                <br>
+                <p>比賽前，向雲飛依然囂張，走到對方的板凳挑衅，指導老師教訓他：「半點謙虛都沒有！」向雲飛跟傅志明說：「今天你要給我眼神，否則我不會傳球給你！」傅志明說：「會的。」傅志明身材雖高，但因為動作不靈活，經常被對手忽視。一開球，對方忽略了志明，向雲飛傳給他，志明前面一片空位，直接上籃，進了。下一球防守，田家炳小學使用全場緊迫，向雲飛把球搶回來，又一個上籃進了。但對手在第二節來一個小高潮，把比分拉開，結束上半場。</p>
+                <br>
+                <p>冠軍隊方寸大亂，改回用人盯人戰術。向雲飛瞬間鬆綁，就像籃球之神附體一樣，個人突破上籃，連取六分。隊員士氣大增，第三第四節田家炳小學以21比10大勝，形勢最終逆轉。觀眾席上，支持的同學大喊：「向雲飛！向雲飛！大明星！大明星！」向雲飛一臉傲氣地跟同學們揮手致意。</p>
+                <br>
+                <p>回到學校後，向雲飛逐一和隊友握手致謝，說:「這一場的勝利來自我們的綜合實力，謝謝大家！」隊員滿臉錯愕。傅志明忍不住笑了笑，說：「籃球明星瘋了嗎？」向雲飛拍了拍傅志明的肩膊，說：「是你說的，籃球不是一個人打的！」</p>
+                <br>
+                <p>向雲飛終於成為了籃球場上的明星，但這一戰後，向雲飛反而不再稀罕當甚麼明星呢。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《幸福的一家人》 5H 曾曼玲</h2>
+                <p>在一個下雨的晚上，我被一個女孩抱在懷裏，她帶我到一個陌生的屋子裏。</p>
+                <br>
+                <p>我在女孩的懷裏，看到一隻大貓。她留意到我，牠皺著眉頭，瞪大眼睛，嗚嗚低鳴，看來十分生氣，牠說：「你快點走！這是我家！快點走！」我嚇得縮在女孩的臂彎。「安安，不要這樣！牠是小貓而已。」女孩說。</p>
+                <br>
+                <p>女孩把我抱到浴室，拿了個盆子裝水。我看著那白茫茫的水氣，心想：她要幹什麽？女孩把我放到盆子裏，我的腳碰到了水，水耶！水好可怕耶！我不停掙扎。但女孩很溫柔，慢慢用水淋濕我，給我洗了個澡。</p>
+                <br>
+                <p>洗完澡，女孩又把我吹乾，我感到很舒服，便不再掙扎。我的肚子餓了，正想著這兒有沒有垃圾桶可以找點東西吃。我還未出動，女孩便把一盆咖啡色的小顆粒放在我的面前，我聞了聞，噢！香噴噴的，就吃了起來。</p>
+                <br>
+                <p>那一晚，我躺在軟綿綿的毛巾上，在籠子裏躺得很舒服。那個安安的聲音在房間中不斷傳出：「小子！看我哪一天宰了你！」我是有點怕，但因為看不見牠的樣子，也漸漸安下了心，沉沉睡去。</p>
+                <br>
+                <p>在「女孩媽媽」家已經住了一段日子，跟安安總算相安無事，當然，要牠喜歡我是沒有可能的，因為我分了媽媽一半的愛呀！</p>
+                <br>
+                <p>一天，我在陽臺上玩我的新玩具熊，正玩得興起，用力一甩，竟把玩具熊從陽台甩了出去。我不想失去我的新玩具，不顧一切跳了下去。天呀！一陣天旋地轉，我重重地摔到一塊金屬板上，好疼呀！我雖然剛才努力地讓手腳的小軟墊先著地，但仍是好疼呀！而且，我在哪兒？</p>
+                <br>
+                <p>我抬頭望到安安，只見牠在窗邊消失了。不一會，媽媽的臉兒便出現了！我喵喵的呼救，媽媽的臉兒又消失了。安安看著我，說：「別動啊！你在別人家的空調上啊！那地兒很小，你一動就會掉下去啊！別動！千萬別動，我來救你！」聽到安安那快哭出來的聲音，我終於明白，那些我們一起──爭東西吃，爭玩具玩，爭著要睡媽媽的床──的日子，其實沒有白過。</p>
+                <br>
+                <p> 終於我安全地回到家裏，媽媽買了三個蝴蝶結，一個綁在我的籠子上，一個掛在安安的小床上，一個別在她自己的抱枕上。媽媽說：「我們一家人，要永遠在一起。」我很幸運可以遇見媽媽，遇見安安，她們接納我，愛我，我們成為了幸福的一家人。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《神秘的奇遇》 5H 梁愷喬</h2>
+                <p>「哇──哇──哇──」我一邊哭泣，一邊仰望着黑漆漆、萬里無雲的星空，我整晚都睡不着，只是難過地回想起我們一起走過的日子。</p>
+                <br>
+                <p>某一天，一位轉班生──莉莉──到了我們的班。因為她是轉校生，所以沒有什麼朋友。有一次小息，一位同學被我們班的「小霸王」欺負，莉莉挺身而出，幫助被欺負的同學，這種正義感令我很想與她交朋友。</p>
+                <br>
+                <p>翌日，我在小賣部用我的優惠券買了兩顆糖果，我把其中一顆給了莉莉。她疑惑地說：「為什麼給我？」我道：「我買了兩顆，但我吃不完。」藉着這次機會，我們聊得好投契。從此，我們成了好朋友。我們每天一起放學、一起吃飯、一起玩耍……不過，我從沒想到，我的好朋友原來一直在欺騙我。</p>
+                <br>
+                <p>有一次，我和莉莉愉快地放學，經過新開業的花繩店。玻璃櫥窗裏擺放着各式各樣的手工棉繩，給路人展示展示。當莉莉看到鮮紅的花繩，眼睛亮了一亮，整個身體用盡最大的勁撲過去。「咯、咯、咯……」莉莉一邊盯着紅繩，一邊拍打玻璃。幸好老闆那時候在熟睡中，她的古怪行徑沒有被發現，但有幾個路人用着疑惑的眼神盯着我們，其中一人説：「這人怎麼這麼奇怪？」我尷尬極了！強行拉着莉莉走到公園。莉莉好像慢慢清醒過來，捂着紅通通的臉跑回家。我想：「莉莉難道有問題？過度活躍症？癲癎症？肌肉不協調？」第二天回到學校，我也沒有問她，因為我覺得這樣很不禮貌，所以決定不問。</p>
+                <br>
+                <p>可是，上常識課時，她又「出事」了！這課的主題是「光」，老師拿着雷射筆，「卡達亅的一 聲按下開關，還未開腔說話，莉莉已經不受控制地離開座位，追着紅點跑來跑去。她揮動著雙手，不停嘗試抓住紅點，現場的同學，有些目瞪口呆，有些捧腹大笑。我於是衝出座位，走到黑板面前大喊：「別笑了！」我拉走莉莉，帶她到校務處休息。後來我上課時完全不能專心，我決定放學後和莉莉到公園問過究竟。</p>
+                <br>
+                <p>放學了，我牽着莉莉的手，走到公園。我倆在長椅上聊天，我猶豫了一會，嘗試婉轉地問：「你身體是不是有點『毛病』，放心，我不會告訴別人。」莉莉聽到後，眼睛慢慢滲出淚水，道：「我……我是貓星人。」我笑著説：「你是貓星人？你可以變成小貓讓我看看嗎？哈哈！」莉莉聽後，一聲不吭地走到草叢，接著，草叢走出了一隻小貓來。我驚呆了！說不出話來。莉莉看到我的樣子，低下頭，以小貓的形態默默離開。我怕得立即跑回家，坐在床上想了一整個下午。終於，我有了結論：她是貓星人，但她也是我的好朋友啊！莉莉又沒有傷害我，是貓也好，是貓星人也好，跟我是好朋友這一點是不會改變啊！</p>
+                <br>
+                <p>我鼓足勇氣打電話給她，接通了！我對她說：「明天是假期，你今晚來我家玩，好嗎？」莉莉小聲地答應了。莉莉在我家換上了可愛的貓咪圖案睡衣。我們坐在客廳裏，什麼也沒說，我打破了尷尬，堅定地跟她說：「雖然你不是人類，但是你是我的好朋友，不管你是甚麼人！」莉莉又圓又大的眼睛落下了淚水，她告訴我，到地球是要觀察人類的行為，寫一份報告，完成她的老師安排的暑期功課。莉莉感動地說：「你令我明白到我們應對世界上的人，不！是宇宙中的所有生物，一視同仁！」</p>
+                <br>
+                <p>到了莉莉走的那天，我倆牽着手走到公園的空地。我掏出了一份禮物──花繩。莉莉再次控制不住，一手搶了我的花繩玩起來，我無法不取笑她。他平靜下來，害羞地説：「不好意思！」然後遞給我一個小貓鑰匙，她大喊：「我永遠都不會忘記你的！」突然一道金光出現在我的面前，就這樣莉莉就消失得無影無蹤了。</p>
+                <br>
+                <p>我不好意思在街上哭，只好忍住眼淚跑回家去。此刻，我仰望天上，相信星空永遠會記住我們珍貴的回憶。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《農村之旅》 5H 溫俊豪</h2>
+                <p>張聰，十二歲，富三代，仗著家裏有錢，誰也看不起。在學校，與同學關係極差。</p>
+                <br>
+                <p>有一天，他不忿同學玩遊戲打得比他好，把同學的電話摔壞了，他不但沒有向那個同學道歉，還說：「我有錢，賠你就是！」張聰的爺爺早已聽說過張聰的惡劣行為，他本以為張聰只是頑皮，但當這事傳到爺爺的耳裏，爺爺的想法改變了。</p>
+                <br>
+                <p>暑假到了，爺爺說要帶張聰去旅行，說走就走，衣服只帶了一套，說可以到達後再買。張聰問：「我們到哪兒？日本嗎？北京嗎？上海嗎？」爺爺卻含笑不語。結果，他們沒有乘飛機，也沒有坐上高鐵，而是乘坐普普通通的一輛長途巴士，一路搖搖擺擺地向郊外駛去。</p>
+                <br>
+                <p>張聰從未試過如此委屈，彆了一肚子悶氣，拿起手機一路打遊戲，發洩情緒。到達目的地已是黃昏了，只見鄉村小路彎彎曲曲延伸到村子盡頭，路面高低起伏，回巢的麻雀嘰嘰喳喳地叫。爺爺帶著張聰走進鄉村。</p>
+                <br>
+                <p>張聰很不開心，跟著爺爺一直走，走不了幾步，發現打不了遊戲，原來沒有網絡了。張聰向爺爺發脾氣：「爺爺，怎麼會沒網絡？我要回家！我不能沒有網絡，不能沒有手機，不能沒有遊戲！我會死的！我不依！」張聰就坐在路旁的石上不肯走了。爺爺輕描淡寫的說：「你不走，我走囉！再走兩步你就沒有燈囉！」張聰想回頭往大路走，爺爺又說：「這裏每三天才會有一輛巴士經過。」張聰對於爺爺的回答既是憤怒又是無奈，但又不敢反駁，只好把怒氣吞下去，跟著爺爺走進村裏。</p>
+                <br>
+                <p>第二天早上，天還沒亮，爺爺與他一起坐拖拉機到農田。車子滿是泥土，排出的廢氣臭得他不斷咳嗽。忽然間，「轟」的一聲，車停下了。路太窄，他們要走到農田。到了田地，張聰才分到一個餅做早餐，只好狼吞虎嚥地吃下它。</p>
+                <br>
+                <p>爺爺拿起一把鐮刀，交給張聰，要他幫忙收割。「不收割，沒中午飯。」張聰只能照做，但他只想隨隨便便地應付。一個小時過去，張聰看到爺爺已離開自己十米外，他心想：「他老人家年過七十，我一個大好青年怎會比他慢？臉往哪兒擱？不行，我得比他快！」張聰急起直追，右手拿鐮刀，彎著腰背朝天，面朝黃土地；左手抓麥子，割一刀往前一勾，勾住前面的麥子又割，左手拿不了之後便放到身後，又繼續割，放成一堆。很快他已全身濕透，熱得臉孔也變成紅通通的，完成後又要幫忙捆好麥子，再堆在田地。最終他的麥子堆得比爺爺高，心中自豪感滿滿。</p>
+                <br>
+                <p>不等張聰休息，爺爺又吩咐他到市集買菜。他到了市集，見到路邊有個與他年紀相若的男孩，他背著一個小男孩，嘴上不停地吆喝著：「很新鮮的菜，阿姨買點吧！孃孃買點吧！」張聰看見男孩的手黑乎乎的，滿是裂痕。小男孩忙著賣菜，還要不時哄著背後哭泣的小男孩。看見這番情景，張聰心裡很不是滋味。</p>
+                <br>
+                <p>買了菜回去，爺爺要他幫忙做飯。平時這些工作全部都是保姆安排的，他對烹飪自然一竅不通。不過，不幫忙就沒飯吃。哎！他馬上按照爺爺的訓示操作，還是手忙腳亂。切切斫斫，炒炒煮煮，終於兩爺孫把飯弄好了，雖然實際上飯菜弄得不算好吃，但張聰覺得自己做的菜吃起來特別美味。</p>
+                <br>
+                <p>晚上，張聰把手機掏出來，本想看看照片也好，可是手機已經沒電了，他抱著手機哀嘆，但沒幾秒鐘就抱著手機睡著了。</p>
+                <br>
+                <p>這樣過了三天。晚上，爺爺說明天中午有巴士就可以走了。張聰開心得不得了。他趕快洗好了日間穿的衣服，拿到天台上晾，然後躺到沙灘椅上。天氣很好，涼風輕吹，一望無際的天空掛著成千上萬顆小星星，點綴黑暗的天空。他不禁讚嘆：「這個天空實在太美了！」這樣的景色，他在城市裡只聽說過，從未見過，現在他親眼看到了，感到心曠神怡。他伸手到褲袋淘手機，想拍張照片，才記起手機沒電。突然，他發現，第三天了，他今天一整天碰也沒碰過手機。</p>
+                <br>
+                <p>「我不能沒有網絡，不能沒有手機，不能沒有遊戲！我會死的！」</p>
+                <br>
+                <p>這是誰說的傻話？我不是還活著嗎？張聰心中有一種不一樣的感覺。原來沒錢，沒手機，沒網絡，沒遊戲……也可以……沒甚麼……</p>
+                <br>
+                <p>要離開了，張聰與農家的伯伯來了一個擁抱，對他說：「您辛苦了！您要照顧好這塊田地，我有空還會來幫您忙的！」爺爺在旁邊笑了笑。太陽的金光灑在少年人的臉上，照亮了質樸的笑容。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《豺族的阿狸》 5H 邱凝兒</h2>
+                <p>從前，在一個隱蔽的森林裏，有一個動物王國。</p>
+                <br>
+                <p>動物王國裏有很多種族，有兔族、熊族、鳥族……他們都有一技之長，只有豺族不同。豺族族人什麽都不會，整天只是靠著去偷、去搶、去騙，奪取其他動物用自己的勞動換回來的糧食。所以 只要豺族一出現，其他動物都避之則吉，誰都不想成為豺族的下一個「目標」。</p>
+                <br>
+                <p>阿狸作為豺族的一員，從兩歲起就接受豺族的教育，已經變成了一隻狡猾無情的小偷、騙徒，他從小接受的教育便是：能夠拿就拿，不能拿就偷，偷不到就騙，騙不到就搶。</p>
+                <br>
+                <p>有一次，他跟叔叔出外「覓食」，叔叔對阿狸說:「阿狸，你知道嗎？最近森林裏新來了一隻小貓，看起來是個愚蠢的傢伙，我們今天就向他「下手」吧！希望那群多嘴的動物，還沒來得及告訴他我們的「歷史」。</p>
+                <br>
+                <p>「你覓食的時候，一定要記住，利用自身的優點──速度和反應，你一看到他，就要把他逼到牆角，不讓他逃走，然後仔細觀察他身上存放錢財或糧食的地方，一般人都放在口袋，口袋一定要特別注意。如果他拿了籃子，一定要把籃子搶過來，清楚了嗎？快去吧。小心些，被別人發現了。對了，記得要保護好自己，別到時候自己受傷了可就得不償失了。」叔叔對阿狸說道。</p>
+                <br>
+                <p>好巧不巧，就在這時，阿狸看見了那隻貓。他迅速地把他逼到牆角，並一把搶過他手中的籃子。阿狸紅著眼怒吼了一聲：「嗷嗚!」小貓非但沒有害怕，還直視著他的眼睛，對阿狸說：「你就是豺族人嗎？看來別人說得沒錯，豺族就是只會靠搶的動物！」小貓還沒說完，阿狸便搶著說道：「別把我和那群噁心的動物相提並論，你覺得他們很善良嗎？那只是世人的錯覺罷了，他們根本沒有把我們豺族當作是動物王國的一員，什麽事兒都躲著我們，害得我們只能去搶。你覺得我們想去搶嗎？這都是被逼的。」他心道：你算哪位？還對我指指點點的，我媽媽都沒有你話多。</p>
+                <br>
+                <p>阿狸沒想到小貓那麼「不要臉」，自顧自的大聲說道：「我真是難以想像到底是什麽樣的教育，才能把你教成這樣，你怎麽能把這些偷、騙、搶的事說得理所應當？你這理直氣壯的態度不知道的，還以為是別人冤枉你，你真的甚麽都不知道，你真的覺得自己甚麽都沒有做錯嗎？」</p>
+                <br>
+                <p>小貓一連串的話，令阿狸不知道怎樣反駁。「我……我……不對嗎？我怎麼樣跟你有什麼關係呀！」阿狸強詞奪理道。這時叔叔趕了過來，看到阿狸手中的籃子和迷茫的眼神，還有緊盯著阿狸的小貓，他還是搞不清楚到底發生了什麽事。倒是小貓先開口，他說:「你也是豺族人嗎？你們竟然覺得搶別人的東西是對的！試想想：如果有一個人沒有地方住，霸佔了你的住處，你會怎麼？」 </p>
+                <br>
+                <p>「我會很生氣，很生氣，但如果我打不過他，我只能躲著他，不讓他看到我，在我身上佔便宜！我還會告訴我的族人，我還會……」說到這個，阿狸羞愧地低下了頭。洞穴是豺族最重要的地方，而且經過阿狸的這一番話，阿狸終於明白，這麽多年他們的想法，在外人看來是多麽的奇怪，也明白了為什麽其他動物總是躲著他們。</p>
+                <br>
+                <p>阿狸覺得小貓是個聰明人，於是，他不顧叔叔的反對，誠意邀請小貓來到豺族的洞穴，詳細地講出森林中其他動物的觀點，分析當中的事理和邏輯。當然，事情永遠沒有那麽順利，傳統的價值觀在豺族人的心中已深深種下了許多年，要改變並不容易。</p>
+                <br>
+                <p>「我相信會有一天，動物王國裡會是一片欣欣向榮，當中，一定有豺族的一分力。」 </p>
+                <br>
+                <p>過了好久好久，豺族的子子孫孫和動物王國的居民，實現了阿狸的願望。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《誰來愛我》  5H 陳卓圻</h2>
+                <p>「呼──呼──」冷風向我迎面吹來，我抽搐了一下。我走進一條熟悉的後巷，打算和小伙伴們談一談今天晚上到那裏找東西吃。</p>
+                <br>
+                <p>突然，有一群人向我們衝過來，他們穿着藍色的工作服，載着口罩，手上拿着籠子和帶圈的長棍。小時候，媽媽告訴我，那是甚麼署派來捉我們的人，看見他們一定要逃！「把流浪狗捉回去！」有不幸的伙伴被他們團團圍住了！我一直跑、一直跑，直至跑到一個周圍都沒有人的地方才停下來。</p>
+                <br>
+                <p>我很害怕，也擔心伙伴的安全。「好香！」我把兩手攀在玻璃窗沿，看見房子裏面的桌上放滿了食物，有香味撲鼻的火雞，有熱騰騰的烤鴨，還有美味可口的牛排。我的肚子不禁咕咕地叫，我垂涎三尺，心想：要是能吃上一口就好了。我突然聽見一陣急促的腳步聲，扭頭看去，只見一個凶神惡煞的男人，向地下吐了一口痰沬，對我呼喝：「走開！臭狗！」邊說邊揮動手中的鍋鏟。我搖着尾巴表示善意，但他仍然不斷揮動鍋鏟，繼續大聲向我吆喝，我只好離開。</p>
+                <br>
+                <p>夜幕低垂，我又累又餓，躺倒在馬路邊。突然，有一個小女孩向我走過來。小女孩梳著兩條小辮子，頭上結了兩個紅蝴蝶，手抱着一份禮物。小女孩蹲下來摸我的頭，說：「狗狗，你冷嗎？你餓嗎？」我正想回答她，一位穿著紅裙的女子叫喚道：「卓圻，快上車，家裏人都在等着我們吃聖誕大餐呢！」「媽媽，這隻狗狗很可憐呢，我們帶牠回家吧！」「流浪狗很骯髒的，不要摸！你乖，如果你喜歡小狗的話，媽媽帶你到寵物店買，買一隻白色的小貴婦，好不好？」小女孩默默地跟着媽媽走了。我曾經聽一隻老狗說，他聽過被丟在山邊的繁殖場狗媽媽的遺言，他看過寵物店裏病弱小狗奄奄一息的樣子，他嗅過……買賣小狗，我知道是多麼殘忍的一件事。想着想着，那個驅趕我的男人的臉，那個說著要買狗的女人的臉，重疊在一起…… </p>
+                <br>
+                <p>我在天橋底睡了一覺。第二天早上，我發覺有人正摸著我的頭，很是舒服。我睜開眼睛，看見一個老婆婆。老婆婆的衣服破破舊舊的，她身旁的手推車上放滿了一疊疊紙皮。我心裏一陣害怕，向著她汪汪叫。她從口袋裏拿出一個用膠紙袋包着的東西，我定睛一看，那是一塊壓扁了的方包。我不自覺地舔着嘴唇。老婆婆用手把方包的一角掰下來，輕聲道：「來吧，吃吧！」我心中害怕，但我太餓了，快速地把麵包叼走，跑到一角一口吃掉。老婆婆把餘下的麵包放在地上，我不再害怕了，走過去吃麵包。老婆婆苦笑着摸着我的頭說：「別害怕，小東西，你一定很肚餓吧！沒人跟你搶，慢慢吃！」好美味啊！真捨不得一口吞掉。老婆婆嘆了一口氣，繼續説：「唉！不夠嗎？可惜我沒錢給你再買了！」</p>
+                <br>
+                <p>能遇上一個心地善良的老婆婆，我是多麼的幸運啊！雖然吃了這一餐，不知還有沒有下一餐，但我想跟着婆婆。心地良善的老婆婆，你能不能收留我呀？我抬起頭看著她，她正雙眼含著淚看著我呢。 </p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《疫症蔓延下的香港》 5D 陳子聰</h2>
+                <p>2020年的某一天，我看到電視新聞報道指新冠肺炎疫情席捲全球，世界衞生組織向全世界呼籲，關注疫症的蔓延，全民都要做好防疫措施。我立刻把這個消息告訴家人，我跟媽媽說：「家中口罩只剩十個，只夠用兩三天，我們一定要立刻到藥房買防疫用品！」我們立刻出發到藥房購買。</p>
+                <br>
+                <p>我們戴上口罩，只露出眼睛。我們走得很快，擔心防疫用品已被搶光。我們到達藥房時，發覺那裏人山人海，像戰場一樣。很不幸，防疫用品跟我預期一樣已缺貨了。我幾天前還看到貨架上有很多口罩，但現在一盒都沒有。</p>
+                <br>
+                <p>我們立即跑到第二間藥房，我看到還有一盒口罩，便伸手去拿，怎料那盒口罩被一個婆婆拿了。我跟媽媽說：「媽媽，我們家裏的口罩只剩十個，怎麼辦呢？」媽媽說：「先讓給爸爸上班用，我們的看看可不可以重用吧！」</p>
+                <br>
+                <p>有一位陌生阿姨聽到我們的對話，對我們說：「你們很需要口罩吧？我剛剛拿了四盒，分兩盒給你們嗎！」我聽到了十分感動，真想不到有人這麼慷慨，真是雪中送炭，我由衷地說：「謝謝你！」我們抱着那兩盒口罩，生怕會被人搶走一樣，衝到櫃枱付款。</p>
+                <br>
+                <p>一兩星期後，口罩的供應多了，我們也多買了一些放在家中。但是我從新聞報道中得知有很多市民仍未有足夠的防疫用品，特別是那些無家者、獨居長者、清潔工人……當我看到這則新聞報導後，我心如刀割，十分擔憂。我跟媽媽說：「我們可以幫忙他們嗎？」媽媽說：「好啊！我們家裏有不少口罩，我們可拿出五盒，分成每十個一包，派給有需要的人。雖然數量不多，也算盡點心意。」我問媽媽：「要怎樣做？」媽媽想了想，覺得我們可以消毒雙手，把口罩分裝到清潔的膠袋裏，再拿到附近派發給無家者。</p>
+                <br>
+                <p>我們分裝了口罩，便走到附近無家者聚集的天橋底，媽媽說：「兒子，你去送給他們。」我說：「我有點害怕。」媽媽跟我說：「鼓起勇氣過去吧！」我聽媽媽的話，過去問：「請問你需要口罩嗎？」但那位伯伯竟然說：「不是送飯的就快走開啦！很好玩嗎？」我受了驚嚇，但也明白到他們的需要。於是我問媽媽能不能給伯伯買一盒飯，媽媽當然答應了，給我錢，還說：「多買幾盒吧！」</p>
+                <br>
+                <p>我買了幾盒飯，便鼓起勇氣再走到那位伯伯面前，把飯遞給他。伯伯拿了飯，似乎明白到我的善意，問：「你剛剛說有什麼要給我？」我輕聲回答：「口罩。」他竟然突然提高了聲線，高興地說：「要呀！要呀！謝謝你呀！」其他叔叔伯伯見狀，也主動走過來取一盒飯和口罩。不消一會，盒飯和口罩都送完了，我和媽媽也趕快回家，繼續暫時足不出戶的生活。</p>
+                <br>
+                <p>當全世界都需要口罩的時候，有人瘋狂搶購，屯積口罩，有商家故意把價錢大幅調高，發災難之財。這次疫情爆發，令我作為一個小孩子思考了很多事情，令我成長了不少。</p>
+              </div>
+            </li>
+            <li class="splide__slide overflow-scroll">
+              <div class="py-10 px-10 lg:px-30 text-2xl leading-loose">
+                <h2 class="text-2xl font-bold mb-6">《貓日記》 5L 陳怡清</h2>
+                <p>二零二零年六月三日</p>
+                <br>
+                <p>她是誰？我不知道要怎麼稱呼她。我只知道躺在她柔軟的肚子上喝奶，真的很舒服，奶很甜，肚子好軟、好暖。旁邊的是誰？他們和我一樣吃飽喝足了，正睡得香甜，我有著奶白色的毛，我很喜歡用自己的舌頭去舔我的毛，因為這樣看起來更乾淨整潔一些。好睏啊，我要睡了。</p>
+                <br>
+                <p>二零二零年六月三十日</p>
+                <br>
+                <p>「喵！喵！喵！」我會說話了！為什麼說「喵」呢？因為我是一隻貓呀！大貓叫媽媽，小貓叫哥哥、姐姐，我是最小的，叫妹妹。這些都是媽媽教我的，哼！我是不是好聰明呢？今天，媽媽走開了，她說要去找食物。我好悶，便到紙箱外走走。</p>
+                <br>
+                <p>一個比媽媽大得多的動物走了過來，這就是人類嗎？這個身穿藍色T恤衫的人跑了過來，一把抱住我，說：「媽媽，我可以把它帶回家養嗎？」媽媽？於是我有兩個媽媽了。之前哥哥姐姐們說過人類都是壞蛋，不能靠近他們，可是，不是我要靠近他們，而是他們要靠近我，我也沒有辦法啊！</p>
+                <br>
+                <p>二零二零年七月三日</p>
+                <br>
+                <p第一天到這個新家，新媽媽給我起了一個名字──「爾森」，對於名字，我並不在乎，我想我媽媽和哥哥姐姐。></p>
+                <br>
+                <p>不過幾天下來，我慢慢喜歡上新家，我有軟綿綿的床，有美味的食物。而且我喜歡麟洋──就是最初穿藍色T恤衫的男孩──他經常和我在園子裏玩皮球，他拋，我撿，我玩得好開心，他令我覺得我是世界上最幸福的貓咪！</p>
+                <br>
+                <p>二零二零年十二月十七日</p>
+                <br>
+                <p>上個月，我因為吃了毛線，肚子很疼，爸爸穿著睡衣就帶著我，跑了三家醫院救我。我接著做了一個叫「手術」的東西。我也不明白發生甚麼事，迷迷糊糊地遇到很多人，很多貓。肚子疼過又好了，圓形的那個叫「燈罩」的東西戴了又除下了，終於，日子回復如初。</p>
+                <br>
+                <p>今天，麟洋買了一條叫牽繩甚麼的，帶著我到公園玩了！我很感動，爸爸、媽媽和麟洋，是對我真的好，是我的新「家人」。</p>
+                <br>
+                <p>二零二一年三月二十一日</p>
+                <br>
+                <p>幾天前，爸爸說：「一定要送走，貓的身上有細菌，會影響你和寶寶的！」媽媽看著爸爸給她的報紙，沒有說話。爸爸說：「寶寶最重要，怎麼疼愛，貓只是貓，寵物而已。」媽媽說：「可是我們總不能把爾森就這樣丟掉呀！還有麟洋，他會恨死我們呀！」「我會跟麟洋說的，弟弟不比貓重要嗎？我們可以把貓送去流浪動物機構啊！不是要丟到街上，遲點便會有人領養牠。」</p>
+                <br>
+                <p>今天，我坐在籠子裏，電梯門關上的那一刻，家，消失在我的眼前……</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--activate all splide carousels-->
+  <script>
+    var elms = document.getElementsByClassName('splide');
+    for (var i = 0, len = elms.length; i < len; i++) {
+      new Splide(elms[i]).mount();
+    }
+  </script>
+  <footer class="footer relative pt-1 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="sm:flex sm:mt-8 text-center">
+        <div class="mt-8 sm:mt-0 w-screen flex flex-col md:flex-row justify-between">
+          <div class="flex flex-col mb-5 md:text-left">
+            <span class="font-bold text-2xl text-gray-700 mb-2">救世軍田家炳學校</span>
+            <span><a class="text-md">地址: 新界沙田博康邨</a></span>
+            <span><a class="text-md">電話: 2648 9283/ 3707 0900</a></span>
+            <span><a class="text-md">傳真: 2649 4305</a></span>
+            <span><a class="text-md">電郵: tkpps@hkm.salvationarmy.org</a></span>
+          </div>
+          <div class="flex flex-col mb-5 self-center">
+            <span class="text-xl md:text-right">教養孩童，使他走當行的道，就是到老他也不偏離。<br> （箴言22章6節）
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>
